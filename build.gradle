@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'war'
+    id "com.bmuschko.tomcat" version "2.5"
+}
+
+group 'dev.smarthouse'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    springVerison = '5.1.5.RELEASE'
+    tomcatVersion = '8.0.42'
+    gradleTomcatPluginVersion = '2.5'
+    javaEEVersion = '3.1.0'
+}
+
+dependencies {
+    providedCompile "javax.servlet:javax.servlet-api:${javaEEVersion}"
+
+    compile "org.springframework:spring-core:${springVerison}"
+    compile "org.springframework:spring-context:${springVerison}"
+    compile "org.springframework:spring-beans:${springVerison}"
+    compile "org.springframework:spring-web:${springVerison}"
+    compile "org.springframework:spring-webmvc:${springVerison}"
+
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}"
+    tomcat "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}"
+    tomcat "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+
+    testCompile "org.springframework:spring-test:${springVerison}"
+    testCompile "junit:junit:4.12"
+}
+
+tomcat {
+    httpPort = 8080
+    contextPath = '/'
+}
