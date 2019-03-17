@@ -21,7 +21,7 @@ module.exports = {
         })
     ],
     output: {
-        path: __dirname + '/../../../build/classes/static/',
+        path: __dirname + '/../webapp/static/',
         filename: 'js/bundle.js',
     },
     module: {
