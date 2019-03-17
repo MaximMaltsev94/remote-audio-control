@@ -22,3 +22,11 @@ gradle-app.setting
 *.iml
 out
 gen
+
+
+/src/main/frontend/node_modules/
+/src/main/webapp/static/css/bundle.css
+/src/main/webapp/static/js/bundle.js
+/src/main/webapp/static/*.ttf
+/src/main/webapp/static/*.eot
+/src/main/webapp/static/*.svg
