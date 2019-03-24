@@ -8,6 +8,10 @@ gradlew clean build
 ```
 gradlew -DskipFrontend=true clean build
 ```
+### Build frontend only
+```
+gradlew npm_run_build
+```
 ### Webpack watch for development
 ```
 gradlew npm_run_watch

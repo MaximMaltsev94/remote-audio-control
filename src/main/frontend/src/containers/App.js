@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import User from '../components/User'
 import userActions from '../actions/user.action'
+import {Button, Icon} from 'semantic-ui-react';
 
 class App extends Component {
     render() {
@@ -16,6 +17,12 @@ class App extends Component {
             <Link to='/'>
                 <button className='ui button' onClick={logout}>Sign out</button>
             </Link>
+            <Button.Group>
+                <Button icon> <Icon name='step backward' /> </Button>
+                <Button icon> <Icon name='play' /> </Button>
+                <Button icon> <Icon name='step forward' /> </Button>
+                <Button icon> <Icon name='volume up' /> </Button>
+            </Button.Group>
         </div>
     }
 }

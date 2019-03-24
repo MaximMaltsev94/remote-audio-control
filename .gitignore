@@ -25,6 +25,7 @@ gen
 
 
 /src/main/frontend/node_modules/
+/src/main/frontend/package-lock.json
 /src/main/webapp/static/css/bundle.css
 /src/main/webapp/static/js/bundle.js
 /src/main/webapp/static/*.ttf
